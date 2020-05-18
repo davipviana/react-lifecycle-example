@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Cockpit from '../../components/Cockpit/Cockpit'
 import Persons from '../../components/Persons/Persons';
 
 import styles from './App.module.css';
@@ -38,15 +39,33 @@ class App extends Component {
     this.setState({ persons: persons });
   };
 
+  togglePersonsHandler = () => {
+    const doesShow = this.state.showPersons;
+    this.setState({ showPersons: !doesShow });
+  };
+
   render() {
-    return (
-      <div className={styles.App}>
-        <h1>{this.props.title}</h1>
+    let persons = null;
+
+    if (this.state.showPersons) {
+      persons = (
         <Persons
           persons={this.state.persons}
           clicked={this.deletePersonHandler}
           changed={this.nameChangedHandler}
         />
+      );
+    }
+
+    return (
+      <div className={styles.App}>
+        <Cockpit
+          title={this.props.title}
+          showPersons={this.state.showPersons}
+          persons={this.state.persons}
+          clicked={this.togglePersonsHandler}
+        />
+        {persons}
       </div>
     );
   }
