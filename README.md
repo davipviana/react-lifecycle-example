@@ -5,7 +5,17 @@ This is a simple React Application that helps to understand and see the React Co
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Install dependencies](#prerequisites)
 - [Run the Application](#run-the-application)
+- [Folder structure](#folder-structure)
+- [Components](#components)
+    - [App](#app)
+    - [Cockpit](#cockpit)
+    - [Persons](#persons)
+    - [Person](#person)
+- [Lifecycle tracking](#lifecycle-tracking)
+- [React Hooks](#react-hooks)
 - [License](#license)
 
 ## Getting Started
@@ -27,7 +37,7 @@ To install all the project dependencies.
 ## Run the Application
 
 In the project directory, you can run:
-```shell
+```
 yarn start
 ```
 
@@ -37,7 +47,38 @@ Open http://localhost:3000 to view it in the browser.
 The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-## License
+## Folder structure
 
+TODO
+
+## Components
+
+TODO
+
+### App
+
+TODO
+
+### Cockpit
+
+TODO
+
+### Persons
+
+TODO
+
+### Person
+
+TODO
+
+## Lifecycle Tracking
+
+TODO
+
+## React Hooks
+
+TODO
+
+## License
 
 React Component Lifecycle Example is open source software [licensed as MIT](https://github.com/davipviana/react-lifecycle-example/blob/master/LICENSE).
