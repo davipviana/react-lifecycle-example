@@ -108,19 +108,19 @@ The image describes the sequence of lifecycle methods calling for the class-base
 To see this in action, we put some `console.log()` calls inside those methods like:
 ```javascript
 constructor(props) {
-    super(props);
-    console.log('[App.js] constructor');
-    this.state = INITIAL_STATE;
-  }
+  super(props);
+  console.log('[App.js] constructor');
+  this.state = INITIAL_STATE;
+}
 
-  static getDerivedStateFromProps(props, state) {
-    console.log('[App.js] getDerivedStateFromProps', props);
-    return state;
-  }
+static getDerivedStateFromProps(props, state) {
+  console.log('[App.js] getDerivedStateFromProps', props);
+  return state;
+}
 
-  componentDidMount() {
-    console.log('[App.js] componentDidMount');
-  }
+componentDidMount() {
+  console.log('[App.js] componentDidMount');
+}
 ```
 
 Follows the result:
@@ -132,6 +132,45 @@ When we click in **Toggle Persons** button, the `Person` components are created 
 ![lifecycle-tracking-creation-2](docs/assets/lifecycle-tracking-creation-2.png)
 
 ### Update
+
+![component-update](docs/assets/component-update.png)
+
+The image describes the sequence of lifecycle methods calling for the class-based components. And also have a little description of what this methods do and that you can/can't do inside them. 
+
+To see this in action, we put some `console.log()` calls inside those methods like:
+```javascript
+constructor(props) {
+  super(props);
+  this.state = {};
+}
+
+static getDerivedStateFromProps(props, state) {
+  console.log('[Persons.js] getDerivedStateFromProps');
+  return state;
+}
+
+shouldComponentUpdate(nextProps, nextState) {
+  console.log('[Persons.js] shouldComponentUpdate');
+  return true;
+}
+
+getSnapshotBeforeUpdate(prevProps, prevState) {
+  console.log('[Persons.js] getSnapshotBeforeUpdate');
+  return null;
+}
+
+componentDidUpdate() {
+  console.log('[Persons.js] componentDidUpdate');
+}
+```
+
+Follows the result:
+
+![lifecycle-tracking-creation-2](docs/assets/lifecycle-tracking-creation-2.png)
+
+When we type a new character in one of input text inside `Person` component like 'T', for example, the state of the application is updated and the `Persons` components are updated, so, we can see the lifecycle methods calls. See the image below:
+
+![lifecycle-tracking-update](docs/assets/lifecycle-tracking-update.png)
 
 ## License
 
