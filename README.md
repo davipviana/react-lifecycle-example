@@ -10,12 +10,9 @@ This is a simple React Application that helps to understand and see the React Co
 - [Run the Application](#run-the-application)
 - [Folder structure](#folder-structure)
 - [Components](#components)
-    - [App](#app)
-    - [Cockpit](#cockpit)
-    - [Persons](#persons)
-    - [Person](#person)
-- [Lifecycle tracking](#lifecycle-tracking)
-- [React Hooks](#react-hooks)
+- [Lifecycle Tracking](#lifecycle-tracking)
+    - [Creation](#creation)
+    - [Update](#update)
 - [License](#license)
 
 ## Getting Started
@@ -100,7 +97,41 @@ This is a very simple application and it has just four components at all.
 
 ## Lifecycle Tracking
 
-TODO
+All the lifecycle tracking was built using `console.log()` calls inside React [lifecycle methods](https://reactjs.org/docs/state-and-lifecycle.html). Follows a description of how this lifecycle works when a component is created and also when it's updated.
+
+### Creation
+
+![component-creation](docs/assets/component-creation.png)
+
+The image describes the sequence of lifecycle methods calling for the class-based components. And also have a little description of what this methods do and that you can/can't do inside them. 
+
+To see this in action, we put some `console.log()` calls inside those methods like:
+```javascript
+constructor(props) {
+    super(props);
+    console.log('[App.js] constructor');
+    this.state = INITIAL_STATE;
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    console.log('[App.js] getDerivedStateFromProps', props);
+    return state;
+  }
+
+  componentDidMount() {
+    console.log('[App.js] componentDidMount');
+  }
+```
+
+Follows the result:
+
+![lifecycle-tracking-creation-1](docs/assets/lifecycle-tracking-creation-1.png)
+
+When we click in **Toggle Persons** button, the `Person` components are created and we can see the lifecycle methods calls. See the image below:
+
+![lifecycle-tracking-creation-2](docs/assets/lifecycle-tracking-creation-2.png)
+
+### Update
 
 ## License
 
