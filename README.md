@@ -49,7 +49,35 @@ You will also see any lint errors in the console.
 
 ## Folder structure
 
-TODO
+The application has very similar folder structure that an application created with [Create React App](https://github.com/facebook/create-react-app). We just added `assets`, `components` and `containers` (where we keep components such as `App`) folders.
+
+```
+react-lifecycle-example
+├── LICENSE
+├── README.md
+├── node_modules
+├── package.json
+├── yarn.lock
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── serviceWorker.js
+    ├── setupTests.js
+    ├── assets
+    ├── components
+    └── containers
+        └── App
+            ├── App.module.css
+            ├── App.js
+            └── App.test.js
+```
 
 ## Components
 
