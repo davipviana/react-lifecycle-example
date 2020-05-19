@@ -80,30 +80,25 @@ react-lifecycle-example
 ```
 
 ## Components
+![components](docs/assets/components.png)
 
-TODO
+This is a very simple application and it has just four components at all.
 
-### App
+- App
+- Cockpit
+- Person
+- Persons
 
-TODO
+`App` is the container of the application, it stores and manupulates all the information needed in it's state.
 
-### Cockpit
+`Cockpit` contains some information based on data stored in `App` component, it was created to demonstrate the React Component Lifecycle when there is an update.
 
-TODO
+`Person` contains information about a Person (really?) it has a input with two-way binding and was created to demonstrate how this work.
 
-### Persons
+`Persons` is a container for a list of `Person` components. It was created to demonstrate how we can optimze the application without do some unnecessary `render` calls.
 
-TODO
-
-### Person
-
-TODO
 
 ## Lifecycle Tracking
-
-TODO
-
-## React Hooks
 
 TODO
 
