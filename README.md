@@ -97,7 +97,7 @@ This is a very simple application and it has just four components at all.
 
 ## Lifecycle Tracking
 
-All the lifecycle tracking was built using `console.log()` calls inside React [lifecycle methods](https://reactjs.org/docs/state-and-lifecycle.html). Follows a description of how this lifecycle works when a component is created and also when it's updated.
+All the lifecycle tracking was built using `console.log()` calls inside React [lifecycle methods](https://reactjs.org/docs/state-and-lifecycle.html). Follow the description below of how this lifecycle works when a component is created and also when it's updated.
 
 ### Creation
 
