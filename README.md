@@ -180,28 +180,54 @@ In this section you can check how to implement the same features of React Class-
 
 <table>
   <tr>
+    <th>Class-Based Component Feature</th>
+    <th>React Hooks</th>
+  </tr>
+  <tr>
     <td>
       <pre lang="javascript">
-        componentDidUpdate() {
-          console.log('componentDidUpdate');
-        }
+componentDidUpdate() {
+  console.log('componentDidUpdate');
+}
       </pre>
     </td>
     <td>
       <pre lang="javascript">
-        useEffect(() => {
-          console.log('componentDidUpdate equivalent');
-        });
+useEffect(() => {
+  console.log('componentDidUpdate equivalent');
+});
       </pre>
     </td>
   </tr>
+  <tr>
+    <td>
+      <pre lang="javascript">
+componentDidMount()
+      </pre>
+    </td>
+    <td>
+      <pre lang="javascript">
+useEffect(() => {
+  console.log('componentDidMount equivalent');
+}, []);
+      </pre>
+    </td>
+  <tr>
+  <tr>
+    <td>
+      <pre lang="javascript">
+componentWillUnmount()
+      </pre>
+    </td>
+    <td>
+      <pre lang="javascript">
+useEffect(() => {
+  return () => console.log('componentWillUnmount equivalent');
+}, []);
+      </pre>
+    </td>
+  <tr>
 </table>
-
-| Class-Based Component Feature | React Hooks |
-|-----------------------------|-----------|
-|<pre lang="javascript">componentDidMount()</pre>|<pre lang="javascript">useEffect(() => {<br />  console.log('componentDidMount equivalent'); <br/>}, [])</pre>|
-|<pre lang="javascript">componentWillUnmount()</pre>|<pre lang="javascript">useEffect(() => {<br />  return () => console.log('componentWillUnmount equivalent');<br />}, [])</pre>|
-
 ## License
 
 React Component Lifecycle Example is open source software [licensed as MIT](https://github.com/davipviana/react-lifecycle-example/blob/master/LICENSE).
