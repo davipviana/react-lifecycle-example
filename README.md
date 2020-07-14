@@ -13,6 +13,7 @@ This is a simple React Application that helps to understand and see the React Co
 - [Lifecycle Tracking](#lifecycle-tracking)
     - [Creation](#creation)
     - [Update](#update)
+- [React Hooks Equivalents](#react-hooks-equivalents)
 - [License](#license)
 
 ## Getting Started
@@ -123,7 +124,7 @@ componentDidMount() {
 }
 ```
 
-Follows the result:
+See the result below:
 
 ![lifecycle-tracking-creation-1](docs/assets/lifecycle-tracking-creation-1.png)
 
@@ -164,13 +165,24 @@ componentDidUpdate() {
 }
 ```
 
-Follows the result:
+See the result below:
 
 ![lifecycle-tracking-creation-2](docs/assets/lifecycle-tracking-creation-2.png)
 
 When we type a new character in one of input text inside `Person` component like 'T', for example, the state of the application is updated and the `Persons` components are updated, so, we can see the lifecycle methods calls. See the image below:
 
 ![lifecycle-tracking-update](docs/assets/lifecycle-tracking-update.png)
+
+## React Hooks Equivalents
+
+In this section you can check how to implement the same features of React Class-Based Components with [React Hooks](https://reactjs.org/docs/hooks-intro.html).
+
+
+| Class-Based Component Feature | React Hooks |
+|-----------------------------|-----------|
+|<pre lang="javascript">componentDidUpdate() {<br />  console.log('componentDidUpdate'); <br/>}</pre>|<pre lang="javascript">useEffect(() => {<br />  console.log('componentDidUpdate equivalent') <br/>})</pre>|
+|<pre lang="javascript">componentDidMount()</pre>|<pre lang="javascript">useEffect(() => {<br />  console.log('componentDidMount equivalent'); <br/>}, [])</pre>|
+|<pre lang="javascript">componentWillUnmount()</pre>|<pre lang="javascript">useEffect(() => {<br />  return () => console.log('componentWillUnmount equivalent');<br />}, [])</pre>|
 
 ## License
 
