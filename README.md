@@ -222,7 +222,9 @@ componentWillUnmount()
     <td>
       <pre lang="javascript">
 useEffect(() => {
-  return () => console.log('componentWillUnmount equivalent');
+  return () => {
+    console.log('componentWillUnmount equivalent');
+  };
 }, []);
       </pre>
     </td>
