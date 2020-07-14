@@ -214,7 +214,7 @@ useEffect(() => {
 }, []);
       </pre>
     </td>
-  <tr>
+  </tr>
   <tr>
     <td>
       <pre lang="javascript">
@@ -232,7 +232,7 @@ useEffect(() => {
 }, []);
       </pre>
     </td>
-  <tr>
+  </tr>
 </table>
 ## License
 
