@@ -178,11 +178,27 @@ When we type a new character in one of input text inside `Person` component like
 In this section you can check how to implement the same features of React Class-Based Components with [React Hooks](https://reactjs.org/docs/hooks-intro.html).
 
 
+<table>
+  <tr>
+    <td>
+      <pre lang="javascript">
+        componentDidUpdate() {
+          console.log('componentDidUpdate');
+        }
+      </pre>
+    </td>
+    <td>
+      <pre lang="javascript">
+        useEffect(() => {
+          console.log('componentDidUpdate equivalent');
+        });
+      </pre>
+    </td>
+  </tr>
+</table>
+
 | Class-Based Component Feature | React Hooks |
 |-----------------------------|-----------|
-|`componentDidUpdate() {`     |`useEffect(() => {`|
-|`  console.log('componentDidUpdate');`|`  console.log('componentDidUpdate equivalent');`|
-|`}` |`});`|
 |<pre lang="javascript">componentDidMount()</pre>|<pre lang="javascript">useEffect(() => {<br />  console.log('componentDidMount equivalent'); <br/>}, [])</pre>|
 |<pre lang="javascript">componentWillUnmount()</pre>|<pre lang="javascript">useEffect(() => {<br />  return () => console.log('componentWillUnmount equivalent');<br />}, [])</pre>|
 
