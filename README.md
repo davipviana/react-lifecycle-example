@@ -202,7 +202,9 @@ useEffect(() => {
   <tr>
     <td>
       <pre lang="javascript">
-componentDidMount()
+componentDidMount() {
+  console.log('componentDidMount');
+}
       </pre>
     </td>
     <td>
@@ -216,7 +218,9 @@ useEffect(() => {
   <tr>
     <td>
       <pre lang="javascript">
-componentWillUnmount()
+componentWillUnmount() {
+  console.log('componentWillUnmount');
+}
       </pre>
     </td>
     <td>
