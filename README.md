@@ -180,7 +180,9 @@ In this section you can check how to implement the same features of React Class-
 
 | Class-Based Component Feature | React Hooks |
 |-----------------------------|-----------|
-|<pre lang="javascript">componentDidUpdate() {<br />  console.log('componentDidUpdate'); <br/>}</pre>|<pre lang="javascript">useEffect(() => {<br />  console.log('componentDidUpdate equivalent') <br/>})</pre>|
+|`componentDidUpdate() {`     |`useEffect(() => {`|
+|`  console.log('componentDidUpdate');`|`  console.log('componentDidUpdate equivalent');`|
+|`}` |`});`|
 |<pre lang="javascript">componentDidMount()</pre>|<pre lang="javascript">useEffect(() => {<br />  console.log('componentDidMount equivalent'); <br/>}, [])</pre>|
 |<pre lang="javascript">componentWillUnmount()</pre>|<pre lang="javascript">useEffect(() => {<br />  return () => console.log('componentWillUnmount equivalent');<br />}, [])</pre>|
 
