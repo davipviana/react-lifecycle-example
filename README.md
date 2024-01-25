@@ -234,6 +234,7 @@ useEffect(() => {
     </td>
   </tr>
 </table>
+
 ## License
 
 React Component Lifecycle Example is open source software [licensed as MIT](https://github.com/davipviana/react-lifecycle-example/blob/master/LICENSE).
